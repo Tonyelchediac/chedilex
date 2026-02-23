@@ -323,7 +323,6 @@ header {
 /* Clients Section - Premium Marquee */
 .clients {
   background: var(--light);
-  overflow: hidden;
 }
 
 .logos {
