@@ -22,7 +22,11 @@
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   line-height: 1.6;
   color: var(--secondary);
   background-color: #ffffff;
@@ -323,54 +327,21 @@ header {
 }
 
 .logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   overflow: hidden;
-  padding: 20px 0;
-  background: white;
-  white-space: nowrap;
-  position: relative;
-  mask-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0) 0%,
-      rgb(0, 0, 0) 15%,
-      rgb(0, 0, 0) 85%,
-      rgba(0, 0, 0, 0) 100%);
-  -webkit-mask-image: linear-gradient(to right,
-      rgba(0, 0, 0, 0) 0%,
-      rgb(0, 0, 0) 15%,
-      rgb(0, 0, 0) 85%,
-      rgba(0, 0, 0, 0) 100%);
-}
-
-.logos:hover .logos-slide {
-  animation-play-state: paused;
 }
 
 .logos-slide {
-  display: inline-flex;
-  animation: 35s slide infinite linear;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.logos-slide img {
-  height: 60px;
-  /* Consistent height for logos */
-  margin: 0 30px;
-  filter: grayscale(100%) opacity(0.6);
-  transition: all 0.4s ease;
-  object-fit: contain;
-}
-
-.logos-slide img:hover {
-  filter: grayscale(0%) opacity(1);
-  transform: scale(1.3);
-}
-
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
+.logos img {
+  height: 65px;
 }
 
 /* Portfolio Section */
@@ -440,7 +411,6 @@ header {
   font-size: 0.85rem;
   font-weight: 500;
 }
-
 
 /* phone section */
 #phone {
@@ -967,5 +937,4 @@ footer {
     gap: 0;
     justify-content: space-between;
   }
-
 }
